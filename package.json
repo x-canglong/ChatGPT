@@ -7,6 +7,11 @@
     "start": "electron .",
     "build": "electron-builder build --win --x64"
   },
+  "build": {
+    "win": {
+      "icon": "build/icon.png"
+    }
+  },
   "repository": "https://github.com/x-canglong/ChatGPT",
   "keywords": [
     "Electron",
