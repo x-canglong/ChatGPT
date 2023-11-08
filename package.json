@@ -1,6 +1,6 @@
 {
   "name": "ChatGPT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
@@ -10,6 +10,14 @@
   "build": {
     "win": {
       "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "shortcutName": "ChatGPT"
     }
   },
   "repository": "https://github.com/x-canglong/ChatGPT",

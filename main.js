@@ -5,11 +5,18 @@ const path = require('path')
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
-    fullscreen: true,
+    width: 1920,
+    height: 1040,
+    frame: false,
+    resizable: true,
+    fullscreen: false,
+    autoHideMenuBar: true,
+    backgroundColor: '#e4e4e4',
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
+      nodeIntegration: true, // v5版本开始需要加多这一行
+      contextIsolation: true, // v12版本需要加多这一行
+      enableRemoteModule: true, //v10版本 打开remote模块
     },
   })
   mainWindow.loadURL('https://chat.openai.com')
